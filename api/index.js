@@ -2,8 +2,8 @@ import express from 'express';
 import mongoose from 'mongoose';
 import dotenv from 'dotenv';//we cannto use .env in backend directally
 import userRouter from './routes/user.route.js'
+import authRouter from './routes/auth.route.js'
 dotenv.config()//user.model';
-
 
 
 mongoose.connect(process.env.MONGO).then(()=>{
@@ -13,6 +13,7 @@ mongoose.connect(process.env.MONGO).then(()=>{
     console.log(err);
 })
 const app=express();
+app.use(express.json());
 
 app.listen(3000,()=>{
     console.log("server is runnig on port :3000");
@@ -20,3 +21,4 @@ app.listen(3000,()=>{
 
 
 app.use("/api/user",userRouter);
+app.use('/api/auth',authRouter);
