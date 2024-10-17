@@ -47,9 +47,9 @@ function SignUp() {
         <div className="p-3 max-w-lg mx-auto">
             <h1 className="text-3xl text-center front-semibild my-7"> Sign Up</h1>
             <form onSubmit={handelSubmit} className="flex flex-col gap-4">
-                <input type="text" placeholder='username' className="border p-3 rounded-lg " id='username' onChange={handelChanege} />
-                <input type="email" placeholder='emial' className="border p-3 rounded-lg " id='email' onChange={handelChanege} />
-                <input type="password" placeholder='password' className="border p-3 rounded-lg " id='password' onChange={handelChanege} />
+                <input type="text" placeholder='Username' className="border p-3 rounded-lg " id='username' onChange={handelChanege} />
+                <input type="email" placeholder='Email' className="border p-3 rounded-lg " id='email' onChange={handelChanege} />
+                <input type="password" placeholder='Password' className="border p-3 rounded-lg " id='password' onChange={handelChanege} />
                 <button disabled={loading} className="bg-slate-700 text-white p-3 rounded-lg uppercase hover:opacity-95 disabled:opacity-80">{loading?"Loading..":"sign up"} </button>
             </form>
             <div className="flex gap-2 mt-5">
