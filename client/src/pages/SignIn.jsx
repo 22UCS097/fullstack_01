@@ -7,6 +7,7 @@ import { signInFailure,signInStart,signInSuccess } from '../redux/user/userSlice
 import OAuth from '../components/OAuth';
 
 function SignUp() {
+    const dispatch=useDispatch();
      const [formData,setFormData]=useState({});
       const {loading,error}=useSelector((state)=>state.user);
      const navigate=useNavigate();
